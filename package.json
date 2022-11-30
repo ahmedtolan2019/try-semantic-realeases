@@ -1,10 +1,11 @@
 {
   "name": "semantic-relase-git",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release"
   },
   "keywords": [],
   "author": "ahmed tolan",
@@ -12,5 +13,11 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ahmedtolan2019/try-git-flow"
+  },
+  "devDependencies": {
+    "semantic-release": "^19.0.5"
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }
