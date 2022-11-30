@@ -20,7 +20,7 @@
     "semantic-release": "^19.0.5"
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "config": {
     "commitizen": {
