@@ -3,19 +3,21 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    branches: "*"
+      - next
+      - beta
+      - "*.x"
 
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 16.x
-      - run: npm install
-      - run: npm run semantic-release
+          cache: "npm"
+          node-version: 16
+      - run: npm ci
+      - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
