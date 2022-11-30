@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "commit": "git-cz"
   },
   "keywords": [],
   "author": "ahmed tolan",
@@ -15,9 +16,15 @@
     "url": "https://github.com/ahmedtolan2019/try-git-flow"
   },
   "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
     "semantic-release": "^19.0.5"
   },
   "publishConfig": {
     "access": "restricted"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
